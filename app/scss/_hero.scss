@@ -1,0 +1,94 @@
+.hero {
+
+    background-color: $veryLightGray;
+
+    &__content {
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        position: relative;
+        height: 16.25rem;
+        width: 100%;
+        background: url('/images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+       // overflow-x: hidden;
+
+        @include breakpoint-up(medium) {
+            min-height: 25rem;
+        }
+
+        @include breakpoint-up(large) {
+            flex: 2.9;
+            order: 2;
+            height: 41rem;
+            background-image: none;
+        }
+
+        &::before {
+        
+            @include breakpoint-up(large) {
+                content: "";
+                position: absolute;
+                height: 100%;
+                opacity: var(--beforeplaceholder, 1);
+                background: url('/images/bg-intro-desktop.svg');
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                width: 150%;
+                background-size: 128%;
+                background-position: 0% 78%;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/image-mockups.png');
+            background-size: 93%;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+
+            @include breakpoint-up(medium) {
+                background-size: 52%;
+                background-position: center 60%;
+            }
+
+            @include breakpoint-up(large) {
+                width: 120%;
+                height: 126%;
+                background-size: 100%;
+                background-position: center 150%;
+                left: 27%;
+            }
+        }
+
+
+    }
+
+    &__text {
+    
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            flex: 2.1;
+            order: 1;
+            text-align: left;
+        }
+        
+    }
+
+    &__cta {
+        padding: 0.875rem 1.875rem; 
+        margin-bottom: 2.375rem;
+    }
+
+    
+}
