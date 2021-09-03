@@ -1,0 +1,91 @@
+.articles {
+
+    padding-top: 5.3125rem;
+    padding-bottom: 5rem;
+    background-color: $veryLightGray;
+
+    @include breakpoint-up(large){
+        padding-top: 5.875rem;
+    }
+}
+
+.article {
+
+    &__content {
+
+        h2 {
+            margin-bottom: 3.5rem;
+
+            @include breakpoint-down(medium) {
+                text-align: center;
+                margin-bottom: 2.125rem;
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 1.625rem;
+        grid-template-columns: 1fr;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+
+        border-radius: 0.25rem;
+        overflow: hidden;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            scale: 1.03;
+        }
+    }
+
+    &__image {
+        
+        height: 12.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+       
+    }
+    
+    &__text {
+
+        background: $white;
+        padding: 1.625rem 1.5625rem;
+        padding-bottom: 2.5rem;
+
+        @include breakpoint-up(large){
+            padding-bottom: 1.625rem;
+        }   
+    
+    }   
+
+    &__author {
+
+        font-size: 0.625rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    &__title {
+        margin-bottom: 0.75rem;
+
+        &:hover {
+           color: $darkGreen;
+        }
+    }
+
+    &__description {
+
+        font-size: 0.75rem;
+        margin-bottom: 0;
+    }
+}

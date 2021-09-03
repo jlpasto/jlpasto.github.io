@@ -1,0 +1,115 @@
+.footer {
+
+    background-color: $darkBlue;
+    color: $white;
+
+    &__content {
+
+        padding-top: 2.125rem;
+        padding-bottom: 2.125rem;
+        text-align: center;
+
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: 280px 190px 190px auto;
+            padding-top: 2.8125rem;
+            padding-bottom: 2.8125rem;
+            text-align: left;
+        }
+        
+    }
+
+    &__column {
+
+        @include breakpoint-up(large){
+            display: grid;
+            align-content: space-between;
+
+            &--4 {
+                text-align: right;
+            }
+        }
+    }
+
+    &__logo {
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.625rem;
+        }
+    }
+
+    &__social {
+        
+        a {
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+            &:hover svg path{
+                fill: $darkGreen;
+            }
+        }
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.625rem;
+        }
+
+        a:not(:last-child) {
+            margin-right: .60rem;
+        }
+
+
+    }
+
+    &__menu {
+        
+        @include breakpoint-down(medium){
+            margin-bottom: 1rem;
+        }
+        
+   
+        &:not(:nth-child(3n+0)) {
+            @include breakpoint-up(large){
+                margin-bottom: 1rem;
+            }
+        }
+
+
+        a {
+            display: block;
+            font-size: 0.875rem;
+            transition: all 150ms ease-in-out;
+            
+            &:hover {
+                color: $darkGreen;
+            }
+
+            @include breakpoint-up(medium) {
+                font-size: 1rem;                
+            }
+
+        }
+    }
+
+    &__cta {
+
+        @include breakpoint-down(medium){
+            margin-top: 1.875rem;
+            margin-bottom: 1.5rem;
+        }
+    }   
+
+    &__copyright {
+
+        color: $grayishBlue;
+        font-size: 0.875rem;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 0.3125rem;
+        }
+
+        @include breakpoint-up(medium) {
+            font-size: 1rem;
+        }
+
+    }
+}
