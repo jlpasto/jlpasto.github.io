@@ -458,6 +458,7 @@ a {
 .footer__socials ul li a i {
   font-size: 2.2rem;
   color: #3BB4C1;
+  transition: all 150ms ease-in-out;
 }
 
 .footer__socials ul li a i:hover {
