@@ -1,0 +1,48 @@
+.hero {
+
+    margin-bottom: 6.5rem;
+
+    @include breakpoint-up(large){
+        display: flex;
+        margin-bottom: 6rem;
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+
+        @include breakpoint-up(large){
+            flex: 35rem 0;
+            margin-right: 5rem;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2.5rem;
+    
+    }
+
+    &__subheading {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+
+    &__image {
+        width: 80%;
+        margin: 0 auto;
+
+        @include breakpoint-up(medium){
+            width: 50%;
+            margin-top: -5rem;
+        }
+
+        @include breakpoint-up(large){
+            width: 40%;
+            margin-top: 0;
+        }
+
+    }
+
+    &__avatar {
+        width: 100%;
+    }
+}

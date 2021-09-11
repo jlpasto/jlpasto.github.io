@@ -1,0 +1,44 @@
+.footer {
+
+    padding-top: 4rem;
+    padding-bottom: 4rem; 
+    text-align: center;
+    font-weight: 300;
+
+    &__email {
+        display: inline-block;
+        color: $darkCyan;
+        margin-bottom: 1rem;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__phone {
+        margin-bottom: 1.9rem;
+    }
+
+    &__socials {
+
+        ul {
+
+            li {
+                a {
+                    &:not(:last-child){
+                        margin-right: 0.7rem;
+                    }
+
+                    i {
+                        font-size: 2.2rem;
+                        color: $cyan;
+
+                        &:hover {
+                            color: $darkCyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

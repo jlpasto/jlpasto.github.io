@@ -1,0 +1,18 @@
+//Colors
+
+//Primary 
+$darkCyan: #048998;
+$cyan: #3BB4C1;
+$lightCyan: #BBE2E7;
+
+//Neutral
+$darkGray: #383839;
+$veryLightGray: hsl(0, 0%, 98%);
+$white: #FFF;
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&family=Poppins:wght@200;300;500&display=swap');
+
+$fontHeading: 'Be Vietnam', sans-serif; 
+$fontBody: 'Poppins', sans-serif;
+$fontSize: 1.4rem; 

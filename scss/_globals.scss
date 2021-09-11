@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+    @include breakpoint-up(medium){
+        font-size: 75%;
+    }
+
+    @include breakpoint-up(large){
+        font-size: 90%;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}  
+
+body {
+    margin:0;
+    padding:0;
+    font-family: $fontBody;
+    font-size: $fontSize;
+    color: $darkGray;
+}
+
+
+h1, h2, h3 {
+    font-family: $fontHeading;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-top:0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+}
+
+button, .button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+ul {
+    padding:0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+//CTA
+
+.cta {
+    display: inline-block;
+    padding: 1.2rem 2.2rem;
+    background-color: $darkCyan;
+    border: 0.1rem solid $darkCyan;
+    color: $white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        background-color: $cyan;
+    }
+
+    &--light {
+        background-color: $white;
+        color: $darkCyan;
+        border: 0.1rem solid $darkCyan;
+        &:hover {
+            background-color: $cyan;
+            color: $white;
+        }
+    }
+}
+
+//Spacing
+.container {
+
+    @include breakpoint-up(medium){
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    @include breakpoint-up(large){
+        max-width: 75rem;
+    }
+}
+
+.padding-x {
+    padding: 2.5rem 2rem;
+}
+
+
+//Visibility
+.hide-for-desktop {
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
