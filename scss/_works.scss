@@ -45,7 +45,9 @@
     }
 
     &_title {
-
+         @include breakpoint-up(large){
+            pmargin-top: 0;
+        }
     }
 
     &__description {
