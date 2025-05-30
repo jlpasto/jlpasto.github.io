@@ -6,7 +6,7 @@
         margin-bottom: 3rem;
 
         @include breakpoint-up(medium){
-            padding: 4rem 5rem;
+            padding: 2rem 2rem;
         }
 
         @include breakpoint-up(large){
@@ -32,31 +32,36 @@
 
         @include breakpoint-up(large){
             margin-bottom: 0;
-            width: 85rem;
+            width: 400px;
             height: 20.5rem;
         }
     }
 
     &__text {
 
+
         @include breakpoint-up(large){
             padding-left: 3.5rem;
+            width: 600px;
         }
     }
 
     &_title {
          @include breakpoint-up(large){
-            margin-top: 0;
+            margin-top: 10px;
         }
     }
 
     &__description {
         margin-bottom: 2rem;
 
+        @include breakpoint-up(large){
+            font-size: 14px;
+        }
     }
 
     &__button {
-
+        
     }
 
     &__githublink {
